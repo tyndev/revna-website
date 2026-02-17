@@ -277,6 +277,8 @@ section {
 
 .hero-content {
   max-width: 60%;
+  position: relative;
+  z-index: 1;
 }
 
 .hero .eyebrow {
