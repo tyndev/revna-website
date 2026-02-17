@@ -703,6 +703,16 @@ section {
   }
 
   .hero-illustration {
-    display: none;
+    width: 70%;
+    top: auto;
+    bottom: calc(-1 * var(--space-xl));
+    height: 55%;
+    opacity: 0.3;
+    -webkit-mask-image: linear-gradient(to right, transparent, black 8%),
+                        linear-gradient(to bottom, transparent, black 25%);
+    mask-image: linear-gradient(to right, transparent, black 8%),
+                linear-gradient(to bottom, transparent, black 25%);
+    -webkit-mask-composite: source-in;
+    mask-composite: intersect;
   }
 }
