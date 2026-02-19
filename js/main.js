@@ -1,4 +1,4 @@
-// Rook — main.js
+// Caliper — main.js
 // Hamburger nav toggle + scroll reveal
 
 (function () {

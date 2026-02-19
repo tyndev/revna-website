@@ -1,5 +1,5 @@
 /* ============================================
-   ROOK — Design System
+   CALIPER — Design System
    Reporting Software for Electrical T&C
    ============================================ */
 
@@ -213,7 +213,7 @@ section {
   transition: color 0.2s ease;
 }
 
-.nav-links a:hover {
+.nav-links a:not(.btn):hover {
   color: var(--primary);
 }
 
@@ -293,25 +293,6 @@ section {
   margin-bottom: var(--space-lg);
 }
 
-.hero .micro-proof {
-  margin-top: var(--space-lg);
-  font-family: var(--font-mono);
-  font-size: 0.8125rem;
-  letter-spacing: 0.01em;
-  color: var(--primary-light);
-  opacity: 0.7;
-  transition: opacity 0.3s ease;
-}
-
-.hero .micro-proof:hover {
-  opacity: 1;
-}
-
-.hero .micro-proof .micro-proof-dash {
-  color: var(--accent);
-  margin-right: 0.25em;
-}
-
 /* Hero illustration */
 .hero-illustration {
   position: absolute;
@@ -357,6 +338,10 @@ section {
   margin-bottom: var(--space-xs);
 }
 
+.problem h2 + .problem-grid {
+  margin-top: var(--space-lg);
+}
+
 .problem .section-subhead {
   color: var(--primary-light);
   margin-bottom: var(--space-lg);
@@ -396,7 +381,7 @@ section {
 }
 
 .problem-close {
-  margin-top: var(--space-xl);
+  margin-top: var(--space-lg);
   padding-left: var(--space-md);
   border-left: 3px solid var(--accent);
 }
@@ -714,5 +699,22 @@ section {
                 linear-gradient(to bottom, transparent, black 25%);
     -webkit-mask-composite: source-in;
     mask-composite: intersect;
+  }
+}
+
+/* --- Responsive: Large Mobile Edge (640px-767px) --- */
+@media (min-width: 640px) and (max-width: 767px) {
+  .hero-illustration {
+    width: 64%;
+    top: 0;
+    bottom: calc(-1 * var(--space-xl));
+    height: auto;
+    opacity: 0.26;
+    -webkit-mask-image: linear-gradient(to right, transparent, black 8%);
+    mask-image: linear-gradient(to right, transparent, black 8%);
+  }
+
+  .hero-illustration img {
+    object-position: center 46%;
   }
 }
