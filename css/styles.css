@@ -646,6 +646,12 @@ section {
     align-items: center;
   }
 
+  .hero .container {
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+  }
+
   .hero-illustration {
     width: 52%;
   }
