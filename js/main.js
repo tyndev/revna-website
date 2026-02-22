@@ -1,4 +1,4 @@
-// Caliper — main.js
+// Revna — main.js
 // Hamburger nav toggle + scroll reveal
 
 (function () {

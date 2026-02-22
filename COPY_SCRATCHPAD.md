@@ -1,4 +1,4 @@
-# Caliper Website Copy Scratchpad
+# Revna Website Copy Scratchpad
 
 Use this file to keep replaced/previous copy for later revisit.
 

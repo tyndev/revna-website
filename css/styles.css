@@ -250,7 +250,7 @@ section {
 
 .nav-mark-logo {
   width: auto;
-  height: 18px;
+  height: 20px;
   transition: transform 0.2s ease;
 }
 
@@ -729,7 +729,7 @@ section {
   }
 
   .nav-mark-logo {
-    height: 16px;
+    height: 18px;
   }
 
   .nav-links {
