@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ — Revna</title>
+  <meta name="description" content="Common questions about Revna — offline capability, migration from Excel/PowerDB, report customization, data ownership, and getting started as a pilot partner.">
+  <link rel="icon" href="assets/revna_logo_circle.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="container">
+      <a href="index.html" class="nav-mark" aria-label="Revna home">
+        <span class="nav-mark-text">Revna</span>
+        <img src="assets/revna_logo_circle.svg" alt="" class="nav-mark-logo" aria-hidden="true">
+      </a>
+      <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+	      <div class="nav-links">
+	        <a href="faq.html">FAQ</a>
+	        <!-- PLACEHOLDER: Replace with real email -->
+	        <a href="mailto:PLACEHOLDER@email.com?subject=Revna%20Demo%20Request">Contact</a>
+	        <!-- PLACEHOLDER: Replace with real email -->
+	        <a href="mailto:PLACEHOLDER@email.com?subject=Revna%20Demo%20Request" class="btn btn-outlined">Book a Demo</a>
+	      </div>
+    </div>
+  </nav>
+
+  <!-- FAQ Hero -->
+  <section class="faq-hero">
+    <div class="container">
+      <div class="hero-content">
+        <p class="eyebrow">Frequently Asked Questions</p>
+        <h1>The stuff you'd ask us at the booth.</h1>
+        <p class="subhead">We're building Revna with input from real T&C teams. Here's what they ask first.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ: Field Ready -->
+  <section class="faq-section">
+    <div class="container">
+      <div class="faq-group reveal">
+        <p class="faq-group-label">Field Ready</p>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span>Does it work offline?</span>
+            <svg class="faq-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 8 10 12 14 8"/></svg>
+          </summary>
+          <div class="faq-answer">
+            <p>Yes. Offline is a hard requirement, not a nice-to-have. Revna runs as a desktop app with a local database on each laptop. Your team can enter test data, run calculations, view plots, and attach files with zero internet. When connectivity returns, everything syncs automatically. If it can't sync, the app tells you — it never silently drops data.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span>Does it work on our field tablets?</span>
+            <svg class="faq-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 8 10 12 14 8"/></svg>
+          </summary>
+          <div class="faq-answer">
+            <p>If it runs Windows, yes. Revna is a desktop application that works on Windows laptops, Surface-style tablets, and ruggedized Toughbooks — the same hardware your team already uses in the field. No mobile app needed for the core workflow.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span>What about photos from phones?</span>
+            <svg class="faq-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 8 10 12 14 8"/></svg>
+          </summary>
+          <div class="faq-answer">
+            <p>We know field teams snap nameplate photos on their phones — that's not going away. Revna supports importing photos from cloud-synced folders like OneDrive camera roll. Your phone syncs the photo, Revna picks it up on the laptop. No manual file shuffling.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span>What happens when two people edit the same data offline?</span>
+            <svg class="faq-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 8 10 12 14 8"/></svg>
+          </summary>
+          <div class="faq-answer">
+            <p>Rare in practice — different team members usually work on different equipment. But when it happens, Revna detects the conflict, shows both values with who entered what and when, and lets a lead pick the right one. No silent overwrites.</p>
+          </div>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ: Switching & Migration -->
+  <section class="faq-section alt-bg">
+    <div class="container">
+      <div class="faq-group reveal">
+        <p class="faq-group-label">Switching & Migration</p>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span>Do I have to stop using Excel or PowerDB?</span>
+            <svg class="faq-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 8 10 12 14 8"/></svg>
+          </summary>
+          <div class="faq-answer">
+            <p>For the projects you run through Revna, yes. We've thought hard about this. Trying to keep two systems in sync — someone updating an Excel form on OneDrive while a lead works from Revna — leads to conflicting data and eroded trust. Revna needs to be your single source of truth for the projects you use it on. But you don't have to switch everything overnight. Start with one project, validate it works, then expand.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span>How do I get my existing templates and data in?</span>
+            <svg class="faq-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 8 10 12 14 8"/></svg>
+          </summary>
+          <div class="faq-answer">
+            <p>Upload your existing Excel test form templates or export your PowerDB database, and Revna extracts the field definitions, calculations, and structure. You review the extraction, toggle fields on or off, and adjust as needed. The goal is that your team sees their familiar form layout on day one — not a generic template that doesn't match how they work.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span>Can I start with a project that's already in progress?</span>
+            <svg class="faq-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 8 10 12 14 8"/></svg>
+          </summary>
+          <div class="faq-answer">
+            <p>Yes. Completed forms get imported with their data, incomplete ones just need the template. You don't have to wait for a fresh project to try Revna.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span>How long to get my team up and running?</span>
+            <svg class="faq-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 8 10 12 14 8"/></svg>
+          </summary>
+          <div class="faq-answer">
+            <p>The biggest time investment is the initial template migration — getting your forms into the system. Once that's done, the day-to-day interface is designed to feel familiar to anyone who's filled out test forms in Excel. We're building onboarding to be hands-on: we'll work directly with your team during the pilot to make the transition smooth.</p>
+          </div>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ: Reports & Customization -->
+  <section class="faq-section">
+    <div class="container">
+      <div class="faq-group reveal">
+        <p class="faq-group-label">Reports & Customization</p>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span>Can I customize reports to match what my clients expect?</span>
+            <svg class="faq-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 8 10 12 14 8"/></svg>
+          </summary>
+          <div class="faq-answer">
+            <p>Yes. Every T&C firm has different client requirements, and we're designing for that from day one. You'll be able to control what sections are included or excluded, toggle fields per-report or per-project, choose between a single PDF package or organized zip folders, and adjust formatting without touching test data. Admins can set company-wide defaults, and leads can override per-project or per-client.</p>
+          </div>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ: Your Data -->
+  <section class="faq-section alt-bg">
+    <div class="container">
+      <div class="faq-group reveal">
+        <p class="faq-group-label">Your Data</p>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span>What if you go out of business? What happens to my data?</span>
+            <svg class="faq-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 8 10 12 14 8"/></svg>
+          </summary>
+          <div class="faq-answer">
+            <p>Your data lives on your own machines first — that's the local-first architecture. Even if our servers disappeared tomorrow, every piece of data you've entered is sitting in a database on your laptop. We're also designing data export so you can always pull your information out in standard formats. We're asking you to trust us as your system of record, so we take that seriously.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span>Is my client data secure?</span>
+            <svg class="faq-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 8 10 12 14 8"/></svg>
+          </summary>
+          <div class="faq-answer">
+            <p>Data is stored locally on your devices with optional encryption at rest. When it syncs, it travels over encrypted connections to our servers. Every edit is stamped with who changed what and when, giving you a full audit trail. We know T&C firms handle sensitive client infrastructure data and we're building security in from the start, not bolting it on later.</p>
+          </div>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ: Getting Started -->
+  <section class="faq-section">
+    <div class="container">
+      <div class="faq-group reveal">
+        <p class="faq-group-label">Getting Started</p>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span>Is this built yet? When can I use it?</span>
+            <svg class="faq-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 8 10 12 14 8"/></svg>
+          </summary>
+          <div class="faq-answer">
+            <p>We're in the design and architecture phase right now. The product decisions — offline-first, desktop app, local database, automated report assembly — are locked in. What we're doing now is talking to T&C teams to make sure we build the right thing before we build it. We're looking for a small number of pilot partners to work with closely as we develop. If you want to shape this product, now is when your input matters most.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span>What does the pilot involve?</span>
+            <svg class="faq-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 8 10 12 14 8"/></svg>
+          </summary>
+          <div class="faq-answer">
+            <p>We'd work directly with your team on a real project. You share your existing forms and workflows, we migrate your templates into Revna, and your team uses it alongside us so we can iterate fast. Pilot partners get direct input on features and priority access as the product develops. We're not looking for hundreds of users — we're looking for a few teams who feel this pain deeply enough to help us get it right.</p>
+          </div>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ CTA -->
+  <section class="final-cta">
+    <div class="container">
+      <h2>Still have questions? We'd rather hear them in person.</h2>
+      <p class="subhead">We're looking for T&C teams to build this with. Not for — with.</p>
+      <!-- PLACEHOLDER: Replace with real email -->
+      <a href="mailto:PLACEHOLDER@email.com?subject=Revna%20Demo%20Request" class="btn btn-outlined-light">Book a Demo</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p class="footer-left">&copy; 2026 Revna</p>
+      <div class="footer-links">
+        <a href="faq.html">FAQ</a>
+        <!-- PLACEHOLDER: Replace with real email -->
+        <a href="mailto:PLACEHOLDER@email.com">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
