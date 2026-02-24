@@ -719,6 +719,59 @@ section {
   max-width: 680px;
 }
 
+/* --- How It Works Page --- */
+.how-hero {
+  padding-top: calc(var(--nav-height) + var(--space-xl));
+  padding-bottom: var(--space-xl);
+  position: relative;
+  overflow: hidden;
+}
+
+.how-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, var(--off-white) 1px, transparent 1px);
+  background-size: 24px 24px;
+  pointer-events: none;
+}
+
+.how-hero .container {
+  position: relative;
+}
+
+.how-hero .hero-content {
+  max-width: 640px;
+}
+
+.how-section {
+  padding: var(--space-xl) 0;
+}
+
+.how-section.alt-bg {
+  background-color: var(--off-white);
+}
+
+.how-section h2 {
+  margin-bottom: var(--space-md);
+}
+
+.how-section p {
+  margin-bottom: var(--space-sm);
+  color: var(--primary-light);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+}
+
+.how-section p:last-child {
+  margin-bottom: 0;
+}
+
+.how-section .highlight {
+  color: var(--primary);
+  font-weight: 500;
+}
+
 @keyframes faqSlideDown {
   from {
     opacity: 0;
@@ -795,6 +848,11 @@ section {
   }
 
   .faq-hero {
+    padding-top: calc(var(--nav-height) + var(--space-2xl));
+    padding-bottom: var(--space-2xl);
+  }
+
+  .how-hero {
     padding-top: calc(var(--nav-height) + var(--space-2xl));
     padding-bottom: var(--space-2xl);
   }
