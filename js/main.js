@@ -1,8 +1,37 @@
 // Revna — main.js
-// Hamburger nav toggle + scroll reveal
+// Hamburger nav toggle + scroll reveal + basic analytics hooks
 
 (function () {
   'use strict';
+
+  function trackEvent(name, props) {
+    if (typeof window.plausible === 'function') {
+      window.plausible(name, props ? { props: props } : undefined);
+    }
+  }
+
+  function wireClickTracking() {
+    document.querySelectorAll('[data-track-event]').forEach(function (el) {
+      el.addEventListener('click', function () {
+        var eventName = el.getAttribute('data-track-event');
+        var context = el.getAttribute('data-track-context') || 'unknown';
+        if (eventName) {
+          trackEvent(eventName, { context: context });
+        }
+      });
+    });
+  }
+
+  function trackBookedRedirect() {
+    try {
+      var params = new URLSearchParams(window.location.search);
+      if (params.get('booked') === '1') {
+        trackEvent('booking_redirect_return', { path: window.location.pathname });
+      }
+    } catch (err) {
+      // Ignore URL parsing issues in unsupported browsers.
+    }
+  }
 
   // --- Hamburger Navigation ---
   const hamburger = document.querySelector('.hamburger');
@@ -50,4 +79,7 @@
       el.classList.add('visible');
     });
   }
+
+  wireClickTracking();
+  trackBookedRedirect();
 })();
