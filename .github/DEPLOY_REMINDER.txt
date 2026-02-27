@@ -1,0 +1,4 @@
+Post-launch reminder:
+- Verify https://revna.co/archive/ returns 404 (or is not served).
+- Verify https://revna.co/archive/about.html returns 404 (or is not served).
+- Verify https://revna.co/archive/faq.html returns 404 (or is not served).
