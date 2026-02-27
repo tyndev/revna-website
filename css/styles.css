@@ -463,6 +463,10 @@ section {
 
 /* --- How It Works --- */
 .how-it-works h2 {
+  margin-bottom: var(--space-xs);
+}
+
+.how-it-works > .container > .subhead {
   margin-bottom: var(--space-lg);
 }
 
