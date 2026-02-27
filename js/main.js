@@ -4,9 +4,33 @@
 (function () {
   'use strict';
 
+  function isDebugMode() {
+    try {
+      return new URLSearchParams(window.location.search).get('debug') === '1';
+    } catch (err) {
+      return false;
+    }
+  }
+
+  var debugMode = isDebugMode();
+
+  function debugLog(message, payload) {
+    if (!debugMode || typeof console === 'undefined') {
+      return;
+    }
+    if (typeof payload === 'undefined') {
+      console.log('[revna-debug]', message);
+    } else {
+      console.log('[revna-debug]', message, payload);
+    }
+  }
+
   function trackEvent(name, props) {
+    debugLog('trackEvent', { name: name, props: props || null });
     if (typeof window.plausible === 'function') {
       window.plausible(name, props ? { props: props } : undefined);
+    } else {
+      debugLog('plausible-not-ready');
     }
   }
 
@@ -26,9 +50,11 @@
     try {
       var params = new URLSearchParams(window.location.search);
       if (params.get('booked') === '1') {
+        debugLog('booked-redirect-detected');
         var banner = document.getElementById('booking-confirmation');
         if (banner) {
           banner.hidden = false;
+          debugLog('booking-banner-shown');
         }
         trackEvent('booking_redirect_return', { path: window.location.pathname });
 
@@ -41,10 +67,12 @@
             (url.searchParams.toString() ? '?' + url.searchParams.toString() : '') +
             url.hash;
           window.history.replaceState({}, document.title, next);
+          debugLog('booked-param-removed', { nextUrl: next });
         }
       }
     } catch (err) {
       // Ignore URL parsing issues in unsupported browsers.
+      debugLog('booked-redirect-parse-error', { error: String(err) });
     }
   }
 
@@ -95,6 +123,7 @@
     });
   }
 
+  debugLog('debug-mode-enabled');
   wireClickTracking();
   trackBookedRedirect();
 })();
