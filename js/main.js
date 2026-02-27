@@ -26,7 +26,22 @@
     try {
       var params = new URLSearchParams(window.location.search);
       if (params.get('booked') === '1') {
+        var banner = document.getElementById('booking-confirmation');
+        if (banner) {
+          banner.hidden = false;
+        }
         trackEvent('booking_redirect_return', { path: window.location.pathname });
+
+        // Remove the booked flag from the URL so refreshes do not re-fire the event.
+        if (window.history && window.history.replaceState) {
+          var url = new URL(window.location.href);
+          url.searchParams.delete('booked');
+          var next =
+            url.pathname +
+            (url.searchParams.toString() ? '?' + url.searchParams.toString() : '') +
+            url.hash;
+          window.history.replaceState({}, document.title, next);
+        }
       }
     } catch (err) {
       // Ignore URL parsing issues in unsupported browsers.

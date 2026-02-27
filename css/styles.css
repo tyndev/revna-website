@@ -313,6 +313,23 @@ section {
   transform: rotate(-45deg) translate(5px, -5px);
 }
 
+/* --- Booking Confirmation --- */
+.booking-confirmation {
+  padding-top: calc(var(--nav-height) + var(--space-sm));
+  padding-bottom: 0;
+}
+
+.booking-confirmation__message {
+  max-width: 100%;
+  border-radius: 4px;
+  padding: 0.8rem 1rem;
+  border: 1px solid #b7d3b1;
+  background: #edf7ea;
+  color: #2c4a29;
+  font-size: 0.9375rem;
+  font-weight: 500;
+}
+
 /* --- Hero --- */
 .hero {
   padding-top: calc(var(--nav-height) + var(--space-xl));
